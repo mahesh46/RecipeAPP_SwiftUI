@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC113CF72B22857700A5317D /* CategoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC113CF62B22857700A5317D /* CategoryDetailView.swift */; };
 		FCBAC5E92B17A0C500A2E1DC /* ThemealDb_SwiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBAC5E82B17A0C500A2E1DC /* ThemealDb_SwiftuiApp.swift */; };
 		FCBAC5EB2B17A0C500A2E1DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBAC5EA2B17A0C500A2E1DC /* ContentView.swift */; };
 		FCBAC5ED2B17A0C700A2E1DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCBAC5EC2B17A0C700A2E1DC /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC113CF62B22857700A5317D /* CategoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailView.swift; sourceTree = "<group>"; };
 		FCBAC5E52B17A0C500A2E1DC /* ThemealDb_Swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThemealDb_Swiftui.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCBAC5E82B17A0C500A2E1DC /* ThemealDb_SwiftuiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemealDb_SwiftuiApp.swift; sourceTree = "<group>"; };
 		FCBAC5EA2B17A0C500A2E1DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			children = (
 				FCBAC5E82B17A0C500A2E1DC /* ThemealDb_SwiftuiApp.swift */,
 				FCBAC5EA2B17A0C500A2E1DC /* ContentView.swift */,
+				FC113CF62B22857700A5317D /* CategoryDetailView.swift */,
 				FCBAC6122B17A10800A2E1DC /* CategoryModel.swift */,
 				FCBAC6142B17A26600A2E1DC /* NetworkService.swift */,
 				FCBAC6162B17A2DE00A2E1DC /* CategoryViewModel.swift */,
@@ -271,6 +274,7 @@
 				FCBAC6172B17A2DE00A2E1DC /* CategoryViewModel.swift in Sources */,
 				FCBAC6152B17A26600A2E1DC /* NetworkService.swift in Sources */,
 				FCBAC5E92B17A0C500A2E1DC /* ThemealDb_SwiftuiApp.swift in Sources */,
+				FC113CF72B22857700A5317D /* CategoryDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

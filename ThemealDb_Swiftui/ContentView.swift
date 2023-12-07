@@ -13,21 +13,22 @@ struct ContentView: View {
     
     var body: some View {
        
-        //1.   NavigationStack {
-      // 2.     List {
-        ScrollView {  //1
+            NavigationView {
+                ScrollView {
                     LazyVGrid(columns: columns) { //2
-                ForEach(categoryViewModel.categories ) { cat in
-                    VStack{
-                    
-                        AsyncImage(url: URL(string: cat.strCategoryThumb)) { phase in
+                        
+                        ForEach(categoryViewModel.categories ) { cat in
+                            NavigationLink(destination:  CategoryDetailView(cat: cat)) {
+                                VStack{
+                                    
+                                    AsyncImage(url: URL(string: cat.strCategoryThumb)) { phase in
                                         switch phase {
                                         case .empty:
                                             ProgressView()
                                         case .success(let image):
                                             image.resizable()
-                                                 .aspectRatio(contentMode: .fit)
-                                                 .frame(maxWidth: 300, maxHeight: 100)
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(maxWidth: 300, maxHeight: 100)
                                         case .failure:
                                             Image(systemName: "photo")
                                         @unknown default:
@@ -38,15 +39,19 @@ struct ContentView: View {
                                             EmptyView()
                                         }
                                     }
-                            
-                        Text(cat.strCategory)
-                            .font(.headline)
-                      //  Text(cat.strCategoryDescription)
-                            .font(.body)
-                    }.padding(8)
-                }
-            }
-            
+                                    
+                                    Text(cat.strCategory)
+                                        .font(.headline)
+                                    //  Text(cat.strCategoryDescription)
+                                        .font(.body)
+                                    
+                                }.padding(8)
+                            }
+                        }
+                        
+                    }
+                } //scroll
+            } // Navigationview
             .task {
                 do {
                     try  await categoryViewModel.getCategories()
@@ -56,7 +61,6 @@ struct ContentView: View {
             }
             .listStyle(.grouped)
             .navigationTitle("Categories")
-        }
     }
 }
 
